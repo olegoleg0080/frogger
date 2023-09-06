@@ -164,7 +164,6 @@ function handleObstacles() {
     //* colizion log
     if (frogger.y < 250 && frogger.y > 100) {
         safe = false;
-
         for (let i = 0; i < logsArray.length; i++) {
             if (collision(frogger, logsArray[i])) {
                 frogger.x += logsArray[i].speed;

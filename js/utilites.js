@@ -3,6 +3,8 @@ function animate(){
     ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height)
     frogger.draw();
     frogger.update();
+    handleParticles()
+
     handleObstacles();
     handlScoreBoard()
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height)
@@ -23,6 +25,7 @@ window.addEventListener('keydown', function(e){
 window.addEventListener('keyup', function(e){
     delete keys[e.keyCode];
     frogger.moving = false;
+    frogger.frameX = 0;
 });
 
 function scored(){
